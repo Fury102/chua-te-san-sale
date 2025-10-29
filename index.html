@@ -166,6 +166,12 @@
             line-height: 1.6;
             white-space: pre-line;
         }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 15px;
+        }
 
         .close-btn {
             background-color: var(--primary-color); 
@@ -243,35 +249,35 @@
 
     <div class="grid">
         <div class="topic" onclick="showFlashSale()">
-            <span class="label-sale">HOT</span>
-            <h2>🔥 Flash Sale</h2>
-            <p>Chi tiết từng bước giúp bạn săn sale siêu tốc.</p>
+            <span class="label-sale">vOUCHER</span>
+            <h2>🔥 Voucher sale ngày các ngày 15, 25 hàng tháng</h2>
+            <p>Lưu trước voucher rồi tham khảo các list phía dưới</p>
         </div>
         <div class="topic" onclick="showDiscountCodes()">
-            <span class="label-sale">SALE</span>
-            <h2>🏷️ Mã giảm giá</h2>
-            <p>Mẹo lưu và nhập mã đúng cách để tiết kiệm tối đa.</p>
+            <span class="label-sale">VOUCHER</span>
+            <h2>🏷️ Voucher sale các ngày 10, 20 hàng tháng</h2>
+            <p>Sẽ được hoàn 3-5% giá trị đơn hàng tối đa được 200K xu</p>
         </div>
         <div class="topic" onclick="showZeroDongDeal()">
-            <span class="label-sale">HOT</span>
-            <h2>🔥 Deal 0đ</h2>
-            <p>Mẹo trúng deal miễn phí dễ nhất.</p>
+            <span class="label-sale">LIST</span>
+            <h2>🔥VIVO IQOO NEO 10</h2>
+            <p>Mẹo thêm giỏ hàng trước 00h các ngày sale</p>
         </div>
 
         <div class="topic" onclick="showSaleSchedule()">
-            <span class="label-sale">NEW</span>
-            <h2>⏰ Lịch Săn Sale</h2>
-            <p>Các mốc giờ tung mã và sự kiện sale lớn trong tháng.</p>
+            <span class="label-sale">LIST</span>
+            <h2>🔥REDMI TURBO 4 PRO</h2>
+            <p>Mẹo thêm giỏ hàng trước 00h các ngày sale</p>
         </div>
         <div class="topic" onclick="showFreeshipCodes()">
-            <span class="label-sale">FSHIP</span>
-            <h2>🚚 Mã Freeship</h2>
-            <p>Mẹo lấy và áp dụng mã miễn phí vận chuyển 0đ.</p>
+            <span class="label-sale">LIST</span>
+            <h2> 🔥ACE 5</h2>
+            <p>Mẹo thêm giỏ hàng trước 00h các ngày sale</p>
         </div>
         <div class="topic" onclick="showPaymentDeals()">
-            <span class="label-sale">DEAL</span>
-            <h2>💳 Deal Thanh Toán</h2>
-            <p>Voucher độc quyền từ ví điện tử và thẻ ngân hàng.</p>
+            <span class="label-sale">LIST</span>
+            <h2>🔥IQOO Z10 TURBO PLUS</h2>
+            <p>Mẹo thêm giỏ hàng trước 00h các ngày sale</p>
         </div>
     </div>
 
@@ -350,277 +356,93 @@
         `;
         document.head.appendChild(styleSheet);
 
-
         const flashSaleContent = `
-            𝐒𝐀𝐋𝐄 𝟎𝐇 𝟐𝟓/𝟒‼
-            <br>
-            Ae còn bất kỳ thắc mắc gì hỏi thoải mái bên dưới nhé.
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            <br><br>
-            📌**Mã 20% max 1tr** (tất cả đều có) lưu tại đây:
-            <a href="https://shope.ee/9KLX5GeB09" target="_blank">https://shope.ee/9KLX5GeB09</a>
-            <br>
-            📌**Mã 15% max 1tr, 12% max 1-3tr, 10% max 1-3tr**:
-            <a href="https://shope.ee/1VUNbN3Hke" target="_blank">https://shope.ee/1VUNbN3Hke</a>
-            <br>
-            *...(Vui lòng thay bằng nội dung và link thực tế của bạn)...*
+            <span class="highlight">𝐕𝐨𝐮𝐜𝐡𝐞𝐫 𝟐𝟎% 𝐦𝐚𝐱 𝟏𝐓𝐑</span>
+            (Đúng 0h00 ae bấm vào link sau để lưu mã, chỉ cần lưu được là coi như thành công rồi ae ạ)
+            <a href="https://s.shopee.vn/3LHr24aXek" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/3LHr24aXek</a>
+            List áp mã trên toàn sàn:
+            <a href="https://s.shopee.vn/VxfeyRFH9" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/VxfeyRFH9</a>
+            
+            ---
+            
+            <span class="highlight">🔥 𝐕𝐎𝐔𝐂𝐇𝐄𝐑 𝟐𝟐% 𝐌𝐀𝐗 𝟏𝐓𝐑𝟓</span>
+            Chỉ áp được 1 số shop. Đúng 0h00 mã mới lên lại để lưu. Ae thêm máy vào giỏ hàng trước, đúng 0h00 bấm vào link mã thấy sáng thì bấm lưu ngay lập tức, sau đó bấm vào giỏ hàng và tiến hành thanh toán. Tài khoản nào cũng có, áp cho máy dưới 6tr8 là tối ưu nhất.
+            <a href="https://s.shopee.vn/LdPcEvM2P" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/LdPcEvM2P</a>
+
+            ---
+
+            List toàn bộ sản phẩm trên sàn áp được áp mã : 
+            <a href="https://s.shopee.vn/3LH1BnqyHd" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/3LH1BnqyHd</a>
         `;
 
         const discountCodesContent = `
-            💡 **MẸO LƯU VÀ SỬ DỤNhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhG MÃ HIỆU QUẢ:**
-            <br>
-            **1. Xếp chồng Mã:** Bạn có thể dùng 3 loại mã cùng lúc (Shop + Sàn + Freeship) để giảm giá tối đa.
-            <br>
-            **2. Canh Giờ "Vàng":** Mã thường được tung ra vào các khung giờ chính (0h, 9h, 12h, 21h). Bấm **Lưu** ngay trước giờ G.
-            <br>
-            **3. Lưu Ý Mã Thanh Toán:** Các mã đặc biệt của ví điện tử hoặc ngân hàng cần được **nhập tay** lúc thanh toán.
-            <br><br>
-            **LINK HOT:** <a href="#" target="_blank">Trang Tổng hợp Voucher</a>
+            <span class="highlight">𝐕𝐨𝐮𝐜𝐡𝐞𝐫 𝟏𝟓% 𝐦𝐚𝐱 𝟑𝐭𝐫</span>
+            (tài khoản vàng, kim cương đã có sẵn trong ví) kiểm tra mã mã tại đây:
+            <a href="https://s.shopee.vn/7fRabBub02" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/7fRabBub02</a>
+
+            <span class="highlight">𝐕𝐨𝐮𝐜𝐡𝐞𝐫 𝟏𝟐% 𝐦𝐚𝐱 𝟏-𝟑𝐭𝐫</span>
+            (dành cho ae từ hạng bạc trở lên, hạng nào thì chỉ lưu được mã của hạng đó, ae không có hạng đợi 15/5 nhé) lưu tại đây:
+            <a href="https://s.shopee.vn/5pzwPvPTrE" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/5pzwPvPTrE</a>
         `;
 
         const zeroDongDealContent = `
-            🎁 **ĐIỀU KIỆN VÀ CHIẾN hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhTHUẬT SĂN DEAL 0Đ:**
-            <br>
-            **1. Chọn Sản phẩm Giá trị Thấp:** Tăng khả năng thành công với sản phẩm dưới 50k.
-            <br>
-            **2. Kết hợp Freeship:** Deal 0đ thường yêu cầu áp dụng kết hợp **Mã Freeship** và **Voucher Sàn** để đưa giá trị sản phẩm về 0đ.
-            <br>
-            **3. Tài khoản Mới:** Người dùng mới thường có các mã độc quyền, tận dụng để săn Deal 0đ dễ dàng hơn.
-            <br>
-            **4. Nhanh tay:** Deal này có số lượng rất giới hạn, cần thao tác nhanh như Flash Sale!
+            Shop 1 | 6tr5-6tr7 bh 12th: 
+            <a href="https://s.shopee.vn/9KZogZ6mHB" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/9KZogZ6mHB</a>
+            Shop 2 | 6tr5-6tr7 bh 3th: 
+            <a href="https://s.shopee.vn/60JMiV8Mdu" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/60JMiV8Mdu</a>
+            Shop 3 | 6tr5-6tr7 bh 3th:
+            <a href="https://s.shopee.vn/9zpVTt1TIi" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/9zpVTt1TIi</a>
+            Shop 4 | 6tr5-6tr7 bh 12th: 
+            <a href="https://s.shopee.vn/9fCf5IofHJ" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/9fCf5IofHJ</a>
+            Shop 5 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City):
+            <a href="https://s.shopee.vn/3Lp99sK8n5" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/3Lp99sK8n5</a>
+            Shop 6 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City): 
+            <a href="https://s.shopee.vn/7fRahgyr9W" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/7fRahgyr9W</a>
+            Shop 7 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City):
+            <a href="https://s.shopee.vn/gHqN2yOum" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/gHqN2yOum</a>
+            Shop 8 | 7tr-7tr2 BHV 12th MBC HN:
+            <a href="https://s.shopee.vn/30fl9Ilmxk" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/30fl9Ilmxk</a>
+            Shop 9 | 7tr-7tr2 BHV 12th MBC Đà Nẵng: 
+            <a href="https://s.shopee.vn/6AcmvBU3ta" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/6AcmvBU3ta</a>
+            Shop 10 | 6tr7-6tr8 bh 12th:
+            <a href="https://s.shopee.vn/1VqxMdOTFw" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/1VqxMdOTFw</a>
+            <a href="https://s.shopee.vn/50QpX5bU85" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/50QpX5bU85</a>
         `;
 
         const saleScheduleContent = `
-            📅 **CÁC MỐC GIỜ MÃ KHỦNG:**
-            <br>
-            - **0H:** Mã toàn sàn max 1 Triệu.
-            - **9H & 12H:** Mã Freeship 0đ/25K.
-            - **21H:** Flash Sale sản phẩm mới.
-            <br><br>
-            🎉 **SỰ KIỆN LỚN TRONG THÁNG:**
-            - Ngày đôi (**9.9, 11.11, 12.12**): Mã khủng, giá hủy diệt.
-            - Giữa tháng (**15**): Sale giữa tháng, hoàn xu cực lớn.
+            CHƯA CẬP NHẬP
         `;
 
         const freeshipCodesContent = `
-            **LƯU Ý QUAN TRỌNG VỀ MÃ FREESHIP:**
-            <br>
-            1. **Mã Freeship 0Đ:** Thường chỉ áp dụng cho tài khoản nhất định hoặc cần đơn hàng tối thiểu 0Đ-99K. Săn mã tại các khung giờ vàng.
-            <br>
-            2. **Freeship Xtra:** Chỉ dùng cho Shop có đăng ký dịch vụ này.
-            <br>
-            3. **Mẹo:** Nên mua nhiều món hàng nhỏ từ 1 shop để tiết kiệm Freeship.
-            <br><br>
-            **LINK LƯU MÃ:** <a href="#" target="_blank">Trang Freeship Hôm Nay</a>
+           CHƯA CẬP NHẬP
         `;
 
         const paymentDealsContent = `
-            💳 **DEAL ĐỘC QUYỀN VỚI VÍ & NGÂN HÀNG:**
-            <br>
-            - **Ví điện tử:** Thường có mã giảm thêm 50K - 100K cho đơn hàng từ 500K.
-            - **Thẻ ngân hàng:** Giảm trực tiếp 10% hoặc mã giảm giá cố định.
-            <br>
-            **Mẹo:** Thêm thẻ/ví vào tài khoản trước và chuẩn bị thanh toán ngay 0H vì mã hết rất nhanh!
+            CHƯA CẬP NHẬP
         `;
 
         function showFlashSale() {
-            openPopup("🔥 FLASH SALE 0H 25/4", flashSaleContent);
+            openPopup("🔥 Lưu ý ae không săn điện thoại trên LIVE, Youtube để tránh bị quét và khóa f02", flashSaleContent);
         }
 
         function showDiscountCodes() {
-            openPopup("🏷️ BÍ KÍP SỬ DỤNG MÃ GIẢM GIÁ", discountCodesContent);
+            openPopup("🔥 Lưu ý ae không săn điện thoại trên LIVE, Youtube để tránh bị quét và khóa f02", discountCodesContent);
         }
 
         function showZeroDongDeal() {
-            openPopup("🔥 MẸO TRÚNG DEAL 0Đ THÀNH CÔNG", zeroDongDealContent);
+            openPopup("🔥 Lưu ý ae không săn điện thoại trên LIVE, Youtube để tránh bị quét và khóa f02", zeroDongDealContent);
         }
 
         function showSaleSchedule() {
-            openPopup("⏰ LỊCH SĂN SALE VÀ SỰ KIỆN", saleScheduleContent);
+            openPopup("🔥 Lưu ý ae không săn điện thoại trên LIVE, Youtube để tránh bị quét và khóa f02", saleScheduleContent);
         }
 
         function showFreeshipCodes() {
-            openPopup("🚚 MÃ FREESHIP & MẸO ÁP DỤNG", freeshipCodesContent);
+            openPopup("🔥 Lưu ý ae không săn điện thoại trên LIVE, Youtube để tránh bị quét và khóa f02", freeshipCodesContent);
         }
 
         function showPaymentDeals() {
-            openPopup("💳 DEAL ĐỘC QUYỀN VỚI VÍ & NGÂN HÀNG", paymentDealsContent);
+            openPopup("🔥 Lưu ý ae không săn điện thoại trên LIVE, Youtube để tránh bị quét và khóa f02", paymentDealsContent);
         }
 
         window.onscroll = function() {scrollFunction()};
