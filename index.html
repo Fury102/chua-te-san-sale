@@ -239,6 +239,27 @@
             opacity: 0.9;
         }
     </style>
+    <script>
+        // ⭐️ SCRIPT THỬ NGHIỆM: Buộc mở trình duyệt ngoài (Chrome/Safari)
+        (function() {
+            const githubPageUrl = 'https://fury102.github.io/chua-te-san-sale/';
+            const chromeSchemeUrl = 'googlechrome://navigate?url=' + encodeURIComponent(githubPageUrl);
+            
+            // Cố gắng chuyển hướng tức thì
+            if (navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
+                // Thử Chrome scheme
+                window.location.href = chromeSchemeUrl;
+                
+                // Fallback nếu Chrome scheme không hoạt động (sẽ chuyển hướng lại về trang gốc)
+                setTimeout(function() {
+                    if (!document.hidden) {
+                         // Nếu người dùng vẫn ở trang này (chưa thoát khỏi in-app browser)
+                         // Bạn có thể thêm alert hoặc hướng dẫn ở đây nếu cần
+                    }
+                }, 500); 
+            }
+        })();
+    </script>
 </head>
 <body>
     <h1>
@@ -359,66 +380,81 @@
         const flashSaleContent = `
             <span class="highlight">𝐕𝐨𝐮𝐜𝐡𝐞𝐫 𝟐𝟎% 𝐦𝐚𝐱 𝟏𝐓𝐑</span>
             (Đúng 0h00 ae bấm vào link sau để lưu mã, chỉ cần lưu được là coi như thành công rồi ae ạ)
-            <a href="https://s.shopee.vn/3LHr24aXek" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/3LHr24aXek</a>
+            <a href="https://s.shopee.vn/3LHr24aXek" target="_blank">https://s.shopee.vn/3LHr24aXek</a>
             List áp mã trên toàn sàn:
-            <a href="https://s.shopee.vn/VxfeyRFH9" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/VxfeyRFH9</a>
+            <a href="https://s.shopee.vn/VxfeyRFH9" target="_blank">https://s.shopee.vn/VxfeyRFH9</a>
             
             ---
             
             <span class="highlight">🔥 𝐕𝐎𝐔𝐂𝐇𝐄𝐑 𝟐𝟐% 𝐌𝐀𝐗 𝟏𝐓𝐑𝟓</span>
             Chỉ áp được 1 số shop. Đúng 0h00 mã mới lên lại để lưu. Ae thêm máy vào giỏ hàng trước, đúng 0h00 bấm vào link mã thấy sáng thì bấm lưu ngay lập tức, sau đó bấm vào giỏ hàng và tiến hành thanh toán. Tài khoản nào cũng có, áp cho máy dưới 6tr8 là tối ưu nhất.
-            <a href="https://s.shopee.vn/LdPcEvM2P" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/LdPcEvM2P</a>
+            <a href="https://s.shopee.vn/LdPcEvM2P" target="_blank">https://s.shopee.vn/LdPcEvM2P</a>
 
             ---
 
             List toàn bộ sản phẩm trên sàn áp được áp mã : 
-            <a href="https://s.shopee.vn/3LH1BnqyHd" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/3LH1BnqyHd</a>
+            <a href="https://s.shopee.vn/3LH1BnqyHd" target="_blank">https://s.shopee.vn/3LH1BnqyHd</a>
         `;
 
         const discountCodesContent = `
             <span class="highlight">𝐕𝐨𝐮𝐜𝐡𝐞𝐫 𝟏𝟓% 𝐦𝐚𝐱 𝟑𝐭𝐫</span>
             (tài khoản vàng, kim cương đã có sẵn trong ví) kiểm tra mã mã tại đây:
-            <a href="https://s.shopee.vn/7fRabBub02" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/7fRabBub02</a>
+            <a href="https://s.shopee.vn/7fRabBub02" target="_blank">https://s.shopee.vn/7fRabBub02</a>
 
             <span class="highlight">𝐕𝐨𝐮𝐜𝐡𝐞𝐫 𝟏𝟐% 𝐦𝐚𝐱 𝟏-𝟑𝐭𝐫</span>
             (dành cho ae từ hạng bạc trở lên, hạng nào thì chỉ lưu được mã của hạng đó, ae không có hạng đợi 15/5 nhé) lưu tại đây:
-            <a href="https://s.shopee.vn/5pzwPvPTrE" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/5pzwPvPTrE</a>
+            <a href="https://s.shopee.vn/5pzwPvPTrE" target="_blank">https://s.shopee.vn/5pzwPvPTrE</a>
         `;
 
         const zeroDongDealContent = `
+            **📱 TỔNG HỢP SHOP UY TÍN**
+            
             Shop 1 | 6tr5-6tr7 bh 12th: 
-            <a href="https://s.shopee.vn/9KZogZ6mHB" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/9KZogZ6mHB</a>
+            <a href="https://s.shopee.vn/9KZogZ6mHB" target="_blank">https://s.shopee.vn/9KZogZ6mHB</a>
             Shop 2 | 6tr5-6tr7 bh 3th: 
-            <a href="https://s.shopee.vn/60JMiV8Mdu" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/60JMiV8Mdu</a>
+            <a href="https://s.shopee.vn/60JMiV8Mdu" target="_blank">https://s.shopee.vn/60JMiV8Mdu</a>
             Shop 3 | 6tr5-6tr7 bh 3th:
-            <a href="https://s.shopee.vn/9zpVTt1TIi" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/9zpVTt1TIi</a>
+            <a href="https://s.shopee.vn/9zpVTt1TIi" target="_blank">https://s.shopee.vn/9zpVTt1TIi</a>
             Shop 4 | 6tr5-6tr7 bh 12th: 
-            <a href="https://s.shopee.vn/9fCf5IofHJ" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/9fCf5IofHJ</a>
+            <a href="https://s.shopee.vn/9fCf5IofHJ" target="_blank">https://s.shopee.vn/9fCf5IofHJ</a>
             Shop 5 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City):
-            <a href="https://s.shopee.vn/3Lp99sK8n5" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/3Lp99sK8n5</a>
+            <a href="https://s.shopee.vn/3Lp99sK8n5" target="_blank">https://s.shopee.vn/3Lp99sK8n5</a>
             Shop 6 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City): 
-            <a href="https://s.shopee.vn/7fRahgyr9W" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/7fRahgyr9W</a>
+            <a href="https://s.shopee.vn/7fRahgyr9W" target="_blank">https://s.shopee.vn/7fRahgyr9W</a>
             Shop 7 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City):
-            <a href="https://s.shopee.vn/gHqN2yOum" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/gHqN2yOum</a>
+            <a href="https://s.shopee.vn/gHqN2yOum" target="_blank">https://s.shopee.vn/gHqN2yOum</a>
             Shop 8 | 7tr-7tr2 BHV 12th MBC HN:
-            <a href="https://s.shopee.vn/30fl9Ilmxk" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/30fl9Ilmxk</a>
+            <a href="https://s.shopee.vn/30fl9Ilmxk" target="_blank">https://s.shopee.vn/30fl9Ilmxk</a>
             Shop 9 | 7tr-7tr2 BHV 12th MBC Đà Nẵng: 
-            <a href="https://s.shopee.vn/6AcmvBU3ta" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/6AcmvBU3ta</a>
+            <a href="https://s.shopee.vn/6AcmvBU3ta" target="_blank">https://s.shopee.vn/6AcmvBU3ta</a>
             Shop 10 | 6tr7-6tr8 bh 12th:
-            <a href="https://s.shopee.vn/1VqxMdOTFw" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/1VqxMdOTFw</a>
-            <a href="https://s.shopee.vn/50QpX5bU85" target="_blank" rel="noopener noreferrer">https://s.shopee.vn/50QpX5bU85</a>
+            <a href="https://s.shopee.vn/1VqxMdOTFw" target="_blank">https://s.shopee.vn/1VqxMdOTFw</a>
+            <a href="https://s.shopee.vn/50QpX5bU85" target="_blank">https://s.shopee.vn/50QpX5bU85</a>
         `;
 
         const saleScheduleContent = `
-            CHƯA CẬP NHẬP
+            📅 **CÁC MỐC GIỜ MÃ KHỦNG:**
+            - **0H:** Mã toàn sàn max 1 Triệu.
+            - **9H & 12H:** Mã Freeship 0đ/25K.
+            - **21H:** Flash Sale sản phẩm mới.
+            🎉 **SỰ KIỆN LỚN TRONG THÁNG:**
+            - Ngày đôi (**9.9, 11.11, 12.12**): Mã khủng, giá hủy diệt.
+            - Giữa tháng (**15**): Sale giữa tháng, hoàn xu cực lớn.
         `;
 
         const freeshipCodesContent = `
-           CHƯA CẬP NHẬP
+            **LƯU Ý QUAN TRỌNG VỀ MÃ FREESHIP:**
+            1. **Mã Freeship 0Đ:** Thường chỉ áp dụng cho tài khoản nhất định hoặc cần đơn hàng tối thiểu 0Đ-99K. Săn mã tại các khung giờ vàng.
+            2. **Freeship Xtra:** Chỉ dùng cho Shop có đăng ký dịch vụ này.
+            3. **Mẹo:** Nên mua nhiều món hàng nhỏ từ 1 shop để tiết kiệm Freeship.
+            **LINK LƯU MÃ:** <a href="#" target="_blank">Trang Freeship Hôm Nay</a>
         `;
 
         const paymentDealsContent = `
-            CHƯA CẬP NHẬP
+            💳 **DEAL ĐỘC QUYỀN VỚI VÍ & NGÂN HÀNG:**
+            - **Ví điện tử:** Thường có mã giảm thêm 50K - 100K cho đơn hàng từ 500K.
+            - **Thẻ ngân hàng:** Giảm trực tiếp 10% hoặc mã giảm giá cố định.
+            **Mẹo:** Thêm thẻ/ví vào tài khoản trước và chuẩn bị thanh toán ngay 0H vì mã hết rất nhanh!
         `;
 
         function showFlashSale() {
