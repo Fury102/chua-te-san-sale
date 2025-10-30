@@ -239,27 +239,6 @@
             opacity: 0.9;
         }
     </style>
-    <script>
-        // ⭐️ SCRIPT THỬ NGHIỆM: Buộc mở trình duyệt ngoài (Chrome/Safari)
-        (function() {
-            const githubPageUrl = 'https://fury102.github.io/chua-te-san-sale/';
-            const chromeSchemeUrl = 'googlechrome://navigate?url=' + encodeURIComponent(githubPageUrl);
-            
-            // Cố gắng chuyển hướng tức thì
-            if (navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
-                // Thử Chrome scheme
-                window.location.href = chromeSchemeUrl;
-                
-                // Fallback nếu Chrome scheme không hoạt động (sẽ chuyển hướng lại về trang gốc)
-                setTimeout(function() {
-                    if (!document.hidden) {
-                         // Nếu người dùng vẫn ở trang này (chưa thoát khỏi in-app browser)
-                         // Bạn có thể thêm alert hoặc hướng dẫn ở đây nếu cần
-                    }
-                }, 500); 
-            }
-        })();
-    </script>
 </head>
 <body>
     <h1>
@@ -407,67 +386,102 @@
         `;
 
         const zeroDongDealContent = `
-            **📱 TỔNG HỢP SHOP UY TÍN**
-            
             Shop 1 | 6tr5-6tr7 bh 12th: 
-            <a href="https://s.shopee.vn/9KZogZ6mHB" target="_blank">https://s.shopee.vn/9KZogZ6mHB</a>
+            <a href="https://s.shopee.vn/9KZogZ6mHB" target="_blank">Xem Ngay</a>
             Shop 2 | 6tr5-6tr7 bh 3th: 
-            <a href="https://s.shopee.vn/60JMiV8Mdu" target="_blank">https://s.shopee.vn/60JMiV8Mdu</a>
+            <a href="https://s.shopee.vn/60JMiV8Mdu" target="_blank">Xem Ngay</a>
             Shop 3 | 6tr5-6tr7 bh 3th:
-            <a href="https://s.shopee.vn/9zpVTt1TIi" target="_blank">https://s.shopee.vn/9zpVTt1TIi</a>
+            <a href="https://s.shopee.vn/9zpVTt1TIi" target="_blank">Xem Ngay</a>
             Shop 4 | 6tr5-6tr7 bh 12th: 
-            <a href="https://s.shopee.vn/9fCf5IofHJ" target="_blank">https://s.shopee.vn/9fCf5IofHJ</a>
+            <a href="https://s.shopee.vn/9fCf5IofHJ" target="_blank">Xem Ngay</a>
             Shop 5 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City): 
-            <a href="https://s.shopee.vn/7fRahgyr9W" target="_blank">https://s.shopee.vn/7fRahgyr9W</a>
+            <a href="https://s.shopee.vn/7fRahgyr9W" target="_blank">Xem Ngay</a>
             Shop 6 | 6tr6-6tr9 bh 3th 1 đổi 1 (shop con Mobile City):
-            <a href="https://s.shopee.vn/gHqN2yOum" target="_blank">https://s.shopee.vn/gHqN2yOum</a>
+            <a href="https://s.shopee.vn/gHqN2yOum" target="_blank">Xem Ngay</a>
             Shop 7 | 7tr-7tr2 BHV 12th MBC HN:
-            <a href="https://s.shopee.vn/30fl9Ilmxk" target="_blank">https://s.shopee.vn/30fl9Ilmxk</a>
+            <a href="https://s.shopee.vn/30fl9Ilmxk" target="_blank">Xem Ngay</a>
             Shop 8 | 7tr-7tr2 BHV 12th MBC Đà Nẵng: 
-            <a href="https://s.shopee.vn/6AcmvBU3ta" target="_blank">https://s.shopee.vn/6AcmvBU3ta</a>
+            <a href="https://s.shopee.vn/6AcmvBU3ta" target="_blank">Xem Ngay</a>
             Shop 9 | 6tr7-6tr8 bh 12th:
-            <a href="https://s.shopee.vn/1VqxMdOTFw" target="_blank">https://s.shopee.vn/1VqxMdOTFw</a>
-            <a href="https://s.shopee.vn/50QpX5bU85" target="_blank">https://s.shopee.vn/50QpX5bU85</a>
+            <a href="https://s.shopee.vn/1VqxMdOTFw" target="_blank">Xem Ngay</a>
+            <a href="https://s.shopee.vn/50QpX5bU85" target="_blank">Xem Ngay</a>
         `;
-const saleScheduleContent = `
-            
+
+      const saleScheduleContent = `
+        
             Shop 1 | 5tr5-5tr7 bh 12th (shop phụ của shop 2): 
-            <a href="https://s.shopee.vn/9KZqB7g5XI" target="_blank">https://s.shopee.vn/9KZqB7g5XI</a>
+            <a href="https://s.shopee.vn/5AkHEsMkL9" target="_blank">Xem Ngay</a>
             Shop 2 | 5tr5-5tr7 bh 12th: 
-            <a href="https://s.shopee.vn/2VjDcIyAlz" target="_blank">https://s.shopee.vn/2VjDcIyAlz</a>
+            <a href="https://s.shopee.vn/6KwEczWWC9" target="_blank">Xem Ngay</a>
             Shop 3 | 5tr8-6tr bh 3th: 
-            <a href="https://s.shopee.vn/2qIoIbzCD5" target="_blank">https://s.shopee.vn/2qIoIbzCD5</a> 
+            <a href="https://s.shopee.vn/2B6ffO2YrI" target="_blank">Xem Ngay</a> 
             Shop 4 | 5tr8-6tr bh 3th: 
-            <a href="https://s.shopee.vn/AKOpEPoBO7" target="_blank">https://s.shopee.vn/AKOpEPoBO7</a>
+            <a href="https://s.shopee.vn/5L3hREGIK2" target="_blank">Xem Ngay</a>
             Shop 5 | 5tr9-6tr1 bh 12th: 
-            <a href="https://s.shopee.vn/709ODaexkM" target="_blank">https://s.shopee.vn/709ODaexkM</a>
+            <a href="https://s.shopee.vn/5fgXpueQUr" target="_blank">Xem Ngay</a>
             Shop 6 | 5tr7-5tr9 bh 3th 1 đổi 1 (shop con mobile city): 
-            <a href="https://s.shopee.vn/2fzuouJtGX" target="_blank">https://s.shopee.vn/2fzuouJtGX</a> 
+            <a href="https://s.shopee.vn/AKSNOW434G" target="_blank">Xem Ngay</a> 
             Shop 7 | 5tr7-5tr9 bh 3th 1 đổi 1 (shop con mobile city): 
-            <a href="https://s.shopee.vn/7KlkNVJ2pc" target="_blank">https://s.shopee.vn/7KlkNVJ2pc</a> 
+            <a href="https://s.shopee.vn/Lf1UARpq8" target="_blank">Xem Ngay</a> 
             Shop 8 | 5tr7-5tr9 bh 3th 1 đổi 1 (shop con mobile city): 
-            <a href="https://s.shopee.vn/BKVUeLV32" target="_blank">https://s.shopee.vn/BKVUeLV32</a> 
+            <a href="https://s.shopee.vn/20nFTG7xqN" target="_blank">Xem Ngay</a> 
             Shop 9 | 6tr-6tr2 BHV 12th MBC HN: 
-            <a href="https://s.shopee.vn/4ApcJxU26a" target="_blank">https://s.shopee.vn/4ApcJxU26a</a> 
+            <a href="https://s.shopee.vn/7V8C1OU07M" target="_blank">Xem Ngay</a> 
             Shop 10 | 6tr-6tr2 BHV 12th MBC Đà Nẵng: 
-            <a href="https://s.shopee.vn/3qClvHon91" target="_blank">https://s.shopee.vn/3qClvHon91</a> 
+            <a href="https://s.shopee.vn/3AzCrSAQI5" target="_blank">Xem Ngay</a> 
             Shop 11 | 5tr8-6tr bh 3th: 
-            <a href="https://s.shopee.vn/3Vbko3wFRR" target="_blank">https://s.shopee.vn/3Vbko3wFRR</a>
+            <a href="https://s.shopee.vn/9KZqCoiHzs" target="_blank">Xem Ngay</a>
         `;
 
         const freeshipCodesContent = `
-            **LƯU Ý QUAN TRỌNG VỀ MÃ FREESHIP:**
-            1. **Mã Freeship 0Đ:** Thường chỉ áp dụng cho tài khoản nhất định hoặc cần đơn hàng tối thiểu 0Đ-99K. Săn mã tại các khung giờ vàng.
-            2. **Freeship Xtra:** Chỉ dùng cho Shop có đăng ký dịch vụ này.
-            3. **Mẹo:** Nên mua nhiều món hàng nhỏ từ 1 shop để tiết kiệm Freeship.
-            **LINK LƯU MÃ:** <a href="#" target="_blank">Trang Freeship Hôm Nay</a>
-        `;
 
+            Shop 1 | 6tr773k-7tr bh 12th (shop phụ shop 5):
+            <a href="https://s.shopee.vn/6VFeqMMLEm" target="_blank">Xem Ngay</a>
+            Shop 2 | 6tr7-7tr1 bh 12th sẵn rom QT, đã unlock sim:
+            <a href="https://s.shopee.vn/2VjW5KGI6y" target="_blank">Xem Ngay</a>
+            Shop 3 | 6tr7-7tr1 bh 3th, sẵn rom QT, đã unlock sim:
+            <a href="https://s.shopee.vn/6KwEevjMjR" target="_blank">Xem Ngay</a>
+            Shop 4 | 6tr7-7tr1 bh 3th, sẵn rom QT, đã unlock sim:
+            <a href="https://s.shopee.vn/5AkHGp59HF" target="_blank">Xem Ngay</a>
+            Shop 5 | 6tr8-7tr bh 12th (nguyên seal, chưa unlock sim):
+            <a href="https://s.shopee.vn/AA8xE2XUJz" target="_blank">Xem Ngay</a>
+            Shop 6 | 6tr7-7tr shop con MBC, bh 3th 1 đổi 1 (đã unlock sim):
+            <a href="https://s.shopee.vn/8V0jF0QRea" target="_blank">Xem Ngay</a>
+            Shop 7 | 6tr7-7tr shop con MBC bh 3th 1 đổi 1 (đã unlock sim):
+            <a href="https://s.shopee.vn/7Kolqt84zY" target="_blank">Xem Ngay</a>
+            Shop 8 | 6tr7-7tr shop con MBC bh 3th 1 đổi 1 (đã unlock sim):
+            <a href="https://s.shopee.vn/5fgXrqZKbd" target="_blank">Xem Ngay</a>
+            Shop 9 | 7tr1-7tr3 BHV 12th MBC HN:
+            <a href="https://s.shopee.vn/6fZ53hzmVn" target="_blank">Xem Ngay</a>
+            Shop 10 | 7tr1-7tr3 BHV 12th MBC Đà Nẵng:
+            <a href="https://s.shopee.vn/10uiJJL1Br" target="_blank">Xem Ngay</a>
+            Shop 11 | 7tr3-7tr6 bh 12th:
+            <a href="https://s.shopee.vn/6KwEf8RSts" target="_blank">Xem Ngay</a>
+        `;
         const paymentDealsContent = `
-            💳 **DEAL ĐỘC QUYỀN VỚI VÍ & NGÂN HÀNG:**
-            - **Ví điện tử:** Thường có mã giảm thêm 50K - 100K cho đơn hàng từ 500K.
-            - **Thẻ ngân hàng:** Giảm trực tiếp 10% hoặc mã giảm giá cố định.
-            **Mẹo:** Thêm thẻ/ví vào tài khoản trước và chuẩn bị thanh toán ngay 0H vì mã hết rất nhanh!
+           
+            Shop 1 | 7tr4-7tr7 bh 3th: 
+            <a href="https://s.shopee.vn/50Qr6rqWoq" target="_blank">Xem Ngay</a>
+            Shop 2 | 7tr4-7tr7 bh 3th:
+            <a href="https://s.shopee.vn/4LBAJf9iAl" target="_blank">Xem Ngay</a>
+            Shop 3 | 7tr5-7tr8 bh 12th: 
+            <a href="https://s.shopee.vn/3AzCvX9h0l" target="_blank">Xem Ngay</a>
+            Shop 4 | 7tr1-7tr3 bh 12th: 
+            <a href="https://s.shopee.vn/8ANsskUCAs" target="_blank">Xem Ngay</a>, 
+            <a href="https://s.shopee.vn/3Vc3KBh5a2" target="_blank">Xem Ngay</a>
+            Shop 5 | 7tr3-7tr6 bh 3th 1 đổi 1 (shop con mobile city): 
+            <a href="https://s.shopee.vn/1VqywWoEIy" target="_blank">Xem Ngay</a>
+            Shop 6 | 7tr3-7tr6 bh 3th 1 đổi 1 (shop con mobile city):
+            <a href="https://s.shopee.vn/9AGQ4dFpLf" target="_blank">Xem Ngay</a>
+            Shop 7 | 7tr3-7tr6 bh 3th 1 đổi 1 (shop con mobile city):
+            <a href="https://s.shopee.vn/3fvTWXaqIf" target="_blank">Xem Ngay</a>
+            Shop 8 | 7tr7-8tr BHV 12th MBC HN:
+            <a href="https://s.shopee.vn/4VUaW5Jzy4" target="_blank">Xem Ngay</a>
+            Shop 9 | 7tr7-8tr BHV 12th MBC Đà Nẵng: 
+            <a href="https://s.shopee.vn/5AkHJKPeMS" target="_blank">Xem Ngay</a>
+            Shop 10 | 7tr6-7tr8 bh 12th:
+            <a href="https://s.shopee.vn/5pzy6ZQyGD" target="_blank">Xem Ngay</a>,
+            <a href="https://s.shopee.vn/9UtGTK8pIi" target="_blank">Xem Ngay</a>
         `;
 
         function showFlashSale() {
