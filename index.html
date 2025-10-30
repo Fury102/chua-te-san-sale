@@ -301,46 +301,70 @@
         const popupText = document.getElementById("popupText");
         const closeBtn = document.getElementById("closeBtn");
 
-        function openPopup(title, content) {
-            popupTitle.textContent = title;
-            popupText.innerHTML = content;
-            
-            document.body.classList.add('modal-open'); 
+const POPUP_STATE = { popupOpen: true };
 
-            popup.style.display = "flex";
-            setTimeout(() => {
-                popup.classList.add("fade-in");
-                popupContent.classList.add("slide-in");
-                
-                popupContent.scrollTop = 0; 
-            }, 10);
-            
-            setTimeout(() => {
-                popupContent.scrollTop = 0; 
-            }, 500); 
-        }
+function openPopup(title, content) {
+    popupTitle.textContent = title;
+    popupText.innerHTML = content;
+    
+    
+    history.pushState(POPUP_STATE, "", window.location.href);
 
-        function closePopup() {
-            closeBtn.classList.add('fade-out-x');
+    document.body.classList.add('modal-open'); 
 
-            popup.classList.remove("fade-in");
-            popupContent.classList.remove("slide-in");
+    popup.style.display = "flex";
+    setTimeout(() => {
+        popup.classList.add("fade-in");
+        popupContent.classList.add("slide-in");
+        popupContent.scrollTop = 0; 
+    }, 10);
+    
+    setTimeout(() => {
+        popupContent.scrollTop = 0; 
+    }, 500); 
+}
 
-            popup.style.animation = "fadeOut 0.3s ease forwards";
-            popupContent.style.animation = "slideOutRight 0.4s ease forwards";
-            
-            setTimeout(() => {
-                popup.style.display = "none";
-                popup.style.animation = ""; 
-                popupContent.style.animation = ""; 
+function closePopup() {
+    closeBtn.classList.add('fade-out-x');
 
-                closeBtn.classList.remove('fade-out-x'); 
+    popup.classList.remove("fade-in");
+    popupContent.classList.remove("slide-in");
 
-                document.body.classList.remove('modal-open');
-            }, 400);
-        }
+    popup.style.animation = "fadeOut 0.3s ease forwards";
+    popupContent.style.animation = "slideOutRight 0.4s ease forwards";
+    
+    setTimeout(() => {
+        popup.style.display = "none";
+        popup.style.animation = ""; 
+        popupContent.style.animation = ""; 
 
-        closeBtn.addEventListener('click', closePopup);
+        closeBtn.classList.remove('fade-out-x'); 
+        document.body.classList.remove('modal-open');
+    }, 400);
+    
+   
+    if (history.state && history.state.popupOpen) {
+        history.back();
+    }
+}
+
+
+window.addEventListener('popstate', function(event) {
+    
+    const isPopupOpen = popup.style.display === "flex";
+    
+    if (isPopupOpen) {
+        
+        closePopup();
+       
+        return;
+    } 
+    
+    
+});
+
+
+closeBtn.addEventListener('click', closePopup);
 
         popup.addEventListener('click', function(e) {
             if (e.target === popup) {
